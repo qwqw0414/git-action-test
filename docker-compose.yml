@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  asap:
+    container_name: test
+    build: .
+    image: test:latest
+    ports:
+      - "9090:9090"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - JVM_OPTS=-Xmx500m -Xms500m
+      - TZ=Asia/Seoul
+    restart: unless-stopped
