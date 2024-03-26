@@ -25,7 +25,7 @@
 
 # Dockerfile
 FROM openjdk:17-jdk-slim
-ARG JAR_FILE=build/libs/*.jar
+ARG JAR_FILE=build/libs/gitaction-0.0.1.jar
 COPY ${JAR_FILE} app.jar
 
 # Java 실행

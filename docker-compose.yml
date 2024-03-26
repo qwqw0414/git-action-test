@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  asap:
+  test:
     container_name: test
     build: .
     image: test:latest
@@ -12,3 +12,8 @@ services:
       - JVM_OPTS=-Xmx500m -Xms500m
       - TZ=Asia/Seoul
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
