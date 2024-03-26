@@ -29,4 +29,4 @@ COPY --from=builder /build/build/libs/*.jar ./app.jar
 #COPY ${JAR_FILE} app.jar
 
 # Java 실행
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar","/app.jar"]
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar","app.jar"]
