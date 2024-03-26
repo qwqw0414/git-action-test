@@ -23,10 +23,5 @@ WORKDIR /app
 # Copy the built jar from the build stage
 COPY --from=builder /build/build/libs/*.jar ./app.jar
 
-# Dockerfile
-#FROM openjdk:17-jdk-slim
-#ARG JAR_FILE=build/libs/gitaction-0.0.1.jar
-#COPY ${JAR_FILE} app.jar
-
 # Java 실행
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar","app.jar"]
